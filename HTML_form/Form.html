@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html forms</title>
+  </head>
+  <body>
+    <h2>Enter your User details :</h2>
+    <form>
+      <label for="fname">First name :</label>
+      <input type="text" name="fname" id="fname" /><br /><br />
+
+      <label for="lname">Last name :</label>
+      <input type="text" name="lname" id="lname" /><br /><br />
+
+      <label for="age">Age :</label>
+      <input type="number" name="age" id="age" min="16" max="55" /><br /><br />
+
+      <label for="email">Email ID :</label>
+      <input type="email" name="email" id="email" /><br /><br />
+
+      <label for="telephone">Telephone :</label>
+      <input type="tel" name="telephone" id="telephone" /><br /><br />
+
+      <label for="salary">Current CTC(in INR) :</label>
+      <input
+        type="range"
+        name="salary"
+        id="salary"
+        min="350000"
+        max="5000000"
+      /><br /><br />
+
+      <label for="profile">Linkedin profile URL :</label>
+      <input type="url" name="profile" id="profile" /><br /><br />
+
+      <p>Choose your favourite Web language :</p>
+      <input type="radio" name="fav_lang" id="html" />
+      <label for="html">HTML</label>
+      <input type="radio" name="fav_lang" id="css" />
+      <label for="css">CSS</label>
+      <input type="radio" name="fav_lang" id="javascript" />
+      <label for="javascript">JavaScript</label>
+      <input type="radio" name="fav_lang" id="none" />
+      <label for="none">None of these</label><br />
+
+      <p>Choose resources used for learning coding :</p>
+      <input type="checkbox" name="docs" id="docs" />
+      <label for="docs">Official documentation</label>
+      <input type="checkbox" name="yt" id="yt" />
+      <label for="yt">Youtube tutorials</label>
+      <input type="checkbox" name="mdn" id="mdn" />
+      <label for="mdn">MDN docs</label>
+      <input type="checkbox" name="pa_course" id="pa_course" />
+      <label for="pa_course">Paid courses</label>
+      <br /><br />
+
+      <label for="fav_color">Select your favourite color :</label>
+      <input type="color" name="fav_color" id="fav_color" /><br /><br />
+      <input
+        type="button"
+        onclick="alert('Happy learning!!')"
+        value="Click here"
+      /><br /><br />
+
+      <label for="resume_file">Upload your latest resume :</label>
+      <input type="file" name="resume_file" id="resume_file" /><br /><br />
+
+      <label for="image_photo">Upload your latest photo :</label>
+      <input type="image" src="" alt="user_image" /><br /><br />
+
+      <label for="gsearch">Search Google : </label>
+      <input type="search" name="gsearch" id="gsearch" /><br /><br />
+
+      <label for="time">Enter the time :</label>
+      <input type="time" name="time" id="time" /><br /><br />
+
+      <label for="date">Enter present date :</label>
+      <input type="date" name="date" id="date" /><br /><br />
+
+      <label for="datetime__local">Enter date-time(local) :</label>
+      <input
+        type="datetime-local"
+        name="datetime__local"
+        id="datetime__local"
+      /><br /><br />
+
+      <label for="month">Enter present month :</label>
+      <input type="month" name="month" id="month" /><br /><br />
+
+      <label for="week">Enter present week :</label>
+      <input type="week" name="week" id="week" /><br /><br />
+
+      <label for="password">Enter your password :</label>
+      <input id="passwd" type="password" name="password" id="password" /><br />
+      <input
+        type="checkbox"
+        onclick="toggle()"
+        name="show_passwd"
+        id="show_passwd"
+      />
+      <label for="show_passwd">Show password</label><br /><br />
+
+      <input type="hidden" id="user_id" name="user_id" value="abk9778" />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+
+    <script>
+      function toggle() {
+        let x = document.getElementById("passwd").type;
+        if (x === "password") document.getElementById("passwd").type = "text";
+        else if (x === "text")
+          document.getElementById("passwd").type = "password";
+      }
+    </script>
+  </body>
+</html>
